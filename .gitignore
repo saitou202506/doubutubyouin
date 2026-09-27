@@ -1,2 +1,5 @@
 # Windows生成ファイル除外
 Thumbs.db
+
+# macOSの不要な隠しファイル
+.DS_Store
