@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Noto+Sans+JP:wght@100..900&display=swap');
 
+:root {
+    --color-main: #505050;
+    --font-eb: "Noto Sans JP";
+}
 html {
     -webkit-text-size-adjust: 100%;
     -webkit-appearance: none;
@@ -21,4 +25,52 @@ body {
     }
  }
 
- 
+ .inner {
+    max-width: 1080px;
+    margin-inline: auto;
+ }
+
+ .header {
+    width: 100%;
+    height: 50px;
+    background-color: #FFFFFF;
+    padding-inline: 100px;
+ }
+
+ .header .inner {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .header-logo a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 50px;
+    font-size: 18px;
+    font-family: var(--font-eb);
+    color: var(--color-main);
+ }
+
+ .asiato-icon {
+    width:25.49px;
+    height: 25px;
+    object-fit:contain;
+ }
+
+ .header-nav ul {
+    display:flex;
+    align-items: center;
+    column-gap: 10px;
+ }
+
+ .header-nav ul li a {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    font-size: 14px;
+    font-family: var(--font-eb);
+    color:  var(--color-main);
+
+ }
+
