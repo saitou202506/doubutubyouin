@@ -28,11 +28,22 @@
      </header>
 
       <section id="main" class="main">
-            <div class="main-item_imge">
-                <img src="imge/Mask group.jpg" alt="女性と犬">
+          <div class="main-item_imge">
+             <picture>
+                 <!-- 画面幅767px以下で表示する画像 -->
+                 <source
+                  media="(max-width: 767px)"
+                  srcset="./imge/Mask%20group-sp.jpg"
+                 
+                  >
+
+                 <!-- 画面幅768px以上で表示する画像 -->
+                 <img src="./imge/Mask%20group.jpg" alt="女性と犬">
+               </picture>
 
                 <div class="main-overlay">
-                    
+                   <h2 class="main-message1">滑石きたむら動物病院は</h2>
+                   <p class="main-message2">大切な家族の<br>ホームドクター<span class="main-message3">です</span></p>
                 </div>
             </div>
         
