@@ -168,7 +168,6 @@ body {
     line-height: 1.5;
     font-family: var(--font-eb);
     color: #0D96A0;
-
 }
 
 .main-message3 {
@@ -179,7 +178,7 @@ body {
 
 @media screen and (max-width: 767px) {
 
-   .main-overlay {
+ .main-overlay {
     position: absolute;
     width: calc(311 / 375 * 100vw);
     height: calc(148 / 375 * 100vw);
@@ -187,28 +186,107 @@ body {
     left: 0;
     background: #FFFFFFB3;
     box-sizing: border-box;
-}
+ }
 
-.main-message1 {
+ .main-message1 {
     position: absolute;
-    top: calc(18 / 420 * 100%);
+    top: calc(18 / 148 * 100%);
     left: calc(20 / 311 * 100%);
     align-items: center;
     font-size: calc(20 / 375 * 100vw);
-}
+ }
 
-.main-message2 {
+ .main-message2 {
     position: absolute;
-    top: calc(18 / 420 * 100%);
-    left: calc(20 / 268 * 100%);
+    top: calc(54 / 148 * 100%);
+    left: calc(20 / 311 * 100%);
     align-items: center;
     font-size: calc(30 / 375 * 100vw);
-    line-height: 1.5;
-}
+    line-height: 1.3;
+ }
 
-.main-message3 {
+ .main-message3 {
     display: inline-block;
     position: relative;
     left: 0px;
+ }
 }
+
+.main-overlay-description {
+   position: relative;
+    width: 100%;
+    height: 284px;
+    left: 0;
+    background: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.main-message4 {
+    position: relative;
+    top: 60px;
+    text-align: center;
+    font-size: calc(30 / 1080 * 100vw);
+    font-family: var(--font-eb);
+    color: #0D96A0;
+}
+
+.main-overlay-text {
+    position: relative;
+    top: 80px;
+    text-align: center;
+    font-size: calc(18 / 1080 * 100vw);
+    font-family: var(--font-eb);
+    color: var(--color-main);
+    line-height: 33px;
+}
+
+.main-overlay-description .asiato1-icon {
+    position: absolute;
+    top: 172.99px;
+    left: calc(920 / 1080 * 100vw);
+    display: block;
+    width: 83.75px;
+    height: 77.12px;
+    object-fit: fill;
+}
+
+/* PCでは改行しない */
+.sp-br {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+   .main-overlay-description {
+      height: calc(385 / 375 * 100vw);
+   }
+   .main-message4 {
+    top: 46px;
+    font-size: calc(25 / 375 * 100vw);
+   }
+  
+   .sp-br {
+        display: block;
+    } 
+
+   .main-overlay-text {
+    text-align: left;  
+    top: 63px;
+    font-size: calc(16 / 375 * 100vw);
+    padding-inline: 20px;
+    box-sizing: border-box;
+    line-height: 30px;
+    z-index: 10;
+    }
+
+   .main-overlay-description .asiato1-icon {
+    position: absolute;
+    top: 275.49px;
+    left: calc(277.1 / 375 * 100vw);
+    display: block;
+    width: 68.35px;
+    height: 62.94px;
+    object-fit: fill;
+    opacity: 0.7;
+   }
+
 }
