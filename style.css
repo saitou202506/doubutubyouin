@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Noto+Sans+JP:wght@100..900&display=swap');
 
 :root {
@@ -264,13 +263,19 @@ body {
     display: none;
 }
 
+.pc-space {
+    display: inline;
+}
+
+
 @media screen and (max-width: 767px) {
    .main-overlay-description {
       height: calc(385 / 375 * 100vw);
    }
    .main-message4 {
-    top: 46px;
-    font-size: calc(25 / 375 * 100vw);
+    top: 47px;
+        font-size: calc(25 / 375 * 100vw);
+        line-height: calc(35 / 375 * 100vw);
    }
   
    .sp-br {
@@ -279,21 +284,21 @@ body {
 
    .main-overlay-text {
     text-align: left;  
-    top: 61px;
+    top: 64px;
     font-size: calc(16 / 375 * 100vw);
     padding-inline: 20px;
     box-sizing: border-box;
-    line-height: 30.1px;
+    line-height: calc(30.1 / 375 * 100vw);
     z-index: 10;
     }
 
    .main-overlay-description .asiato1-icon {
     position: absolute;
-    top: 275.49px;
+    top: calc(275.49 / 375 * 100vw);
     left: calc(277.1 / 375 * 100vw);
     display: block;
-    width: 68.35px;
-    height: 62.94px;
+    width: calc(68.35 / 375 * 100vw);
+    height: calc(62.94 / 375 * 100vw);
     object-fit: fill;
     opacity: 0.7;
    }
@@ -305,7 +310,7 @@ body {
     min-height: calc(1057 / 1080 * 100vw);
     background-color: #0D96A01A;
     padding-inline: 0;
-    padding-bottom: calc(60 / 1080 * 100vw);
+    /* padding-bottom: calc(60 / 1080 * 100vw); */
     box-sizing: border-box;
 }
 
@@ -321,7 +326,9 @@ body {
     line-height: 1.5;
 }
 
-/* 文字と画像を横並びにする */
+
+
+/* 説明と医者画像 */
 .strength-inner {
     display: flex;
     align-items: flex-start;
@@ -340,14 +347,30 @@ body {
     padding-top: calc(47 / 1080 * 100vw);
 }
 
-.strength-heading {
+.strength-content1 {
+    flex: 1;
+    min-width: 0;
+    padding-top: calc(50 / 1080 * 100vw);
+}
+
+.strength-content2 {
+    flex: 1;
+    min-width: 0;
+    padding-top: calc(50 / 1080 * 100vw);
+}
+
+.strength-heading,
+.strength-heading1,
+.strength-heading2 {
     color: var(--color-main);
     font-size: calc(22 / 1080 * 100vw);
     font-weight: 700;
     /* line-height: 1.5; */
 }
 
-.strength-description {
+.strength-description,
+.strength-description1,
+.strength-description2 {
     width: 100%;
     height: auto;
     margin-top: calc(19 / 1080 * 100vw);
@@ -357,7 +380,9 @@ body {
     font-weight: 500;
 }
 
-.strength-image {
+.strength-image,
+.strength-image1,
+.strength-image2 {
     flex: 0 0 calc(440 / 1080 * 100vw);
     min-width: 0;
 }
@@ -369,4 +394,214 @@ body {
     object-fit: contain;
 } 
 
+/*カメレオン*/
+.strength-inner1 {
+    display: flex;
+    align-items: flex-start;
+    gap: calc(47 / 1080 * 100vw);
+    max-width: none;
+    width: calc(883 / 1080 * 100vw);
+    margin-top: calc(20 / 1080 * 100vw);
+    margin-left: calc(100 / 1080 * 100vw);
+    margin-right: 0;
+    box-sizing: border-box;
+}
 
+
+/* 説明と医者画像 */
+.strength-inner2 {
+    display: flex;
+    align-items: flex-start;
+    gap: calc(44 / 1080 * 100vw);
+    max-width: none;
+    width: calc(880 / 1080 * 100vw);
+    margin-top: calc(25 / 1080 * 100vw);
+    margin-left: calc(99 / 1080 * 100vw);
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+ .strength {
+    min-height: calc(1336 / 375 * 100vw);
+    box-sizing: border-box;
+ }
+ 
+    .strength-title {
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: calc(20.49 / 375 * 100vw);
+    color: #505050;
+    font-size: calc(25 / 375 * 100vw);
+    padding-top: calc(49 / 375 * 100vw);
+    /* line-height: 1.5; */
+    margin-bottom: 40px;
+ }
+
+     /* 各項目を縦並びにする */
+    .strength-inner,
+    .strength-inner1,
+    .strength-inner2 {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 0;
+    }
+
+        /* 画像を先に表示する */
+    .strength-image,
+    .strength-image1,
+    .strength-image2 {
+        order: 1;
+        flex: none;
+            flex: none;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+        /* width: calc(335 / 375 * 100vw);
+        height: calc(200 / 375 * 100vw); */
+        margin-top: 2px;
+    }
+
+        /* 文字を画像の下に表示する */
+    .strength-content,
+    .strength-content1,
+    .strength-content2 {
+        order: 2;
+        width: 100%;
+        min-width: 0;
+        padding-top: 0;
+        box-sizing: border-box;
+    }
+
+        /* 画像の幅を親要素に合わせる */
+    .strength-description-icon,
+    .strength-description-icon1 {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+ .strength-heading {
+    color: var(--color-main);
+    font-size: calc(20 / 375 * 100vw);
+    font-weight: 700;
+    text-align: center;
+    margin-top: -16px;
+    /* line-height: 1.5; */
+ }
+
+   .sp-br {
+        display: block;
+    }
+
+    .pc-space {
+     display: none;
+    }
+
+ .strength-heading1,
+ .strength-heading2 {
+    color: var(--color-main);
+    font-size: calc(20 / 375 * 100vw);
+    font-weight: 700;
+    margin-top: -14px;
+    text-align: center;
+    /* line-height: 1.5; */
+}
+
+        /* 説明文の文字サイズと行間 */
+    .strength-description,
+    .strength-description1,
+    .strength-description2 {
+        width: 100%;
+        height: auto;
+        margin-top: 8px;
+        font-size: calc(16 / 375 * 100vw);
+        line-height: 1.85;
+        box-sizing: border-box;
+    }
+
+    .strength-description p,
+    .strength-description1 p,
+    .strength-description2 p {
+        margin: 0;
+    }
+
+        /* 各項目の上下の間隔 */
+    .strength-inner1,
+    .strength-inner2 {
+        margin-top: 40px;
+    }
+}
+
+/* 強みの見出し */
+.service-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(20 / 1080 * 100vw);
+    color: #505050;
+    font-size: calc(25 / 1080 * 100vw);
+    margin-top: 2px;
+    line-height: 1.5;
+    margin-bottom: 47px;
+}
+
+/* 3つのサービスを横並びにする */
+.service-inner {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 50px; */
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+
+/* 各サービス */
+.service-item,
+.service-item1,
+.service-item2 {
+    width: calc((100% - 100px) / 3);
+ 
+}
+
+/* 画像を枠の幅に合わせる */
+.service-image,
+.service-image1,
+.service-image2 {
+    width: 100%;
+}
+
+.service-image img,
+.service-image1 img,
+.service-image2 img {
+    display: block;
+    width: calc(260 / 1080 * 100vw);
+    height: calc(200 / 1080 * 100vw);
+}
+
+.service-heading,
+.service-heading1,
+.service-heading2 {
+    color: var(--color-main);
+    font-size: calc(22 / 1080 * 100vw);
+    font-weight: 700;
+    /* line-height: 1.5; */
+}
+
+/* サービスの見出し */
+.service-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(16 / 1080 * 100vw);
+    color: #505050;
+    font-size: calc(25 / 1080 * 100vw);
+    padding-top: calc(60 / 1080 * 100vw);
+    line-height: 1.5;
+}
