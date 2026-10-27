@@ -368,8 +368,17 @@ body {
     /* line-height: 1.5; */
 }
 
+.strength-description1 {
+    width: 100%;
+    height: auto;
+    margin-top: calc(22 / 1080 * 100vw);
+    line-height: 33px;
+    color: var(--color-main);
+    font-size: calc(18 / 1080 * 100vw);
+    font-weight: 500;
+}
+
 .strength-description,
-.strength-description1,
 .strength-description2 {
     width: 100%;
     height: auto;
@@ -559,7 +568,7 @@ body {
     /* gap: 50px; */
     padding-left: 100px;
     padding-right: 100px;
-    
+    margin-bottom: 55px;
 }
 
 /* 各サービス */
@@ -589,8 +598,11 @@ body {
 .service-heading1,
 .service-heading2 {
     color: var(--color-main);
-    font-size: calc(22 / 1080 * 100vw);
+    font-size: calc(20 / 1080 * 100vw);
     font-weight: 700;
+    text-align: center;
+    padding-top: 15px;
+    
     /* line-height: 1.5; */
 }
 
@@ -604,4 +616,144 @@ body {
     font-size: calc(25 / 1080 * 100vw);
     padding-top: calc(60 / 1080 * 100vw);
     line-height: 1.5;
+    margin-bottom: 47px;
+}
+
+.service-description,
+.service-description1,
+.service-description2 {
+    width: 100%;
+    height: auto;
+    margin-top: calc(7 / 1080 * 100vw);
+    line-height: 30px;
+    color: var(--color-main);
+    font-size: calc(17 / 1080 * 100vw);
+    font-weight: 500;
+}
+
+/* スマホ：サービスを縦並びにする */
+@media screen and (max-width: 767px) {
+    .service-inner {
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    /* サービスの見出し */
+.service-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(15.5 / 375 * 100vw);                                             c(16 / 1080 * 100vw);
+    color: #505050;
+    font-size: calc(25.1 / 375 * 100vw);
+    padding-top: calc(42 / 375 * 100vw);
+    /* line-height: 1.5; */
+    margin-left: 1px;
+    margin-bottom: 45px;
+}
+
+    .service-item,
+    .service-item1,
+    .service-item2 {
+        width: 100%;
+    }
+
+    /* 画像を親要素の幅に合わせる */
+    .service-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .service-image1 img,
+    .service-image2 img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    /* 見出し */
+    .service-heading {
+        font-size: calc(20.1 / 375 * 100vw);
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .service-heading1,
+    .service-heading2 {
+        font-size: calc(20.1 / 375 * 100vw);
+        text-align: center;
+        padding-top: 31px;
+    }
+
+    /* 説明文 */
+    .service-description {
+        font-size: calc(16 / 375 * 100vw);
+        line-height: 1.8;
+        padding-top: 5px;
+    }
+
+    .service-description1 {
+        font-size: calc(16 / 375 * 100vw);
+        line-height: 1.8;
+        padding-top: 7px;
+    }
+
+
+    .service-description2 {
+        font-size: calc(16 / 375 * 100vw);
+        line-height: 1.8;
+        padding-top: 5px;
+    }
+}
+
+/* お知らせ　セクション全体 */
+.section-notice {
+    width: 100%;
+    min-height: calc(513 / 1080 * 100vw);
+    background-color:#0D96A01A;
+;
+    padding-inline: 0;
+    /* padding-bottom: calc(60 / 1080 * 100vw); */
+    box-sizing: border-box;
+}
+
+/* お知らせの見出し */
+.notice-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(20 / 1080 * 100vw);
+    color: #505050;
+    font-size: calc(25 / 1080 * 100vw);
+    padding-top: calc(65 / 1080 * 100vw);
+    line-height: 1.5;
+}
+
+.info-notice {
+    font-display: grid;
+    grid-template-columns: repeat(3,1fr);
+        width: calc(879 / 1080 * 100vw);
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #707070;
+}
+
+.info-item {
+    padding: 15px 10px;
+    text-align: center;
+    line-height: 1.5;
+    border-bottom: 1px solid #707070;
+
+    height: auto;
+    /* margin-top: calc(7 / 1080 * 100vw); */
+    /* line-height: 30px; */
+    color: var(--color-main);
+    font-size: calc(17 / 1080 * 100vw);
+    font-weight: 500;
 }
