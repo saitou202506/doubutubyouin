@@ -717,10 +717,7 @@ body {
     width: 100%;
     min-height: calc(513 / 1080 * 100vw);
     background-color:#0D96A01A;
-;
     padding-inline: 0;
-    /* padding-bottom: calc(60 / 1080 * 100vw); */
-    box-sizing: border-box;
 }
 
 /* お知らせの見出し */
@@ -729,31 +726,153 @@ body {
     align-items: center;
     justify-content: center;
     gap: calc(20 / 1080 * 100vw);
-    color: #505050;
+    color: var(--color-main);
     font-size: calc(25 / 1080 * 100vw);
     padding-top: calc(65 / 1080 * 100vw);
     line-height: 1.5;
+    margin-bottom: 46px;
 }
 
-.info-notice {
-    font-display: grid;
-    grid-template-columns: repeat(3,1fr);
-        width: calc(879 / 1080 * 100vw);
-    margin-left: auto;
-    margin-right: auto;
+
+/* お知らせ1件分 */
+.info-item {
+    
+    display: grid;
+    grid-template-columns:
+        calc(92 / 1080 * 100vw)
+        calc(200 / 1080 * 100vw)
+        minmax(0, 1fr);
+
+    width: calc(879 / 1080 * 100vw);
+    align-items: center;
+    column-gap: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #707070;
+    margin-left: calc(119 / 1080 * 100vw);
+    position: relative;
+    border-bottom: none;
+}
+
+.info-item::after {
+    content: "";
+    position: absolute;
+    left: calc(-18.5 / 1080 * 100vw);
+    bottom: 0;
+    width: calc(879 / 1080 * 100vw);
+    border-bottom: 1px solid #707070;
+}
+
+/* 1行目の上にも線を引く */
+.info-item:first-child::before {
+    content: "";
+    position: absolute;
+    left: calc(-18.5 / 1080 * 100vw);
+    top: 0;
+    width: calc(879 / 1080 * 100vw);
     border-top: 1px solid #707070;
 }
 
-.info-item {
-    padding: 15px 10px;
-    text-align: center;
-    line-height: 1.5;
-    border-bottom: 1px solid #707070;
-
-    height: auto;
-    /* margin-top: calc(7 / 1080 * 100vw); */
-    /* line-height: 30px; */
+/* 日付 */
+.info-item1 {
+    font-size: clamp(12px, calc(17 / 1080 * 100vw), 20px);
+    font-weight:700;
+    line-height: 25px;
     color: var(--color-main);
-    font-size: calc(17 / 1080 * 100vw);
-    font-weight: 500;
 }
+
+/* タイトル */
+.info-item2 {
+    font-size: clamp(13px, calc(20 / 1080 * 100vw), 25px);
+    font-weight: 700;
+    line-height: 25px;
+    color: #0D96A0;
+    margin-left: calc(25 / 1080 * 100vw);
+}
+
+/* 説明文 */
+.info-item3 {
+    font-size: clamp(10px, calc(17 / 1080 * 100vw), 22px);
+    font-weight: 500;
+    line-height: 30px;
+    color: var(--color-main);
+    margin-left: calc(33 / 1080 * 100vw);
+}
+
+/* スマホ：お知らせを縦並びにする */
+@media screen and (max-width: 767px) {
+
+    .section-notice {
+    width: 100%;
+    min-height: calc(961 / 375 * 100vw);
+    margin-top: -15px;
+}
+
+/* お知らせの見出し */
+.notice-title {
+    font-size: calc(25 / 375 * 100vw);
+    padding-top: calc(43 / 375 * 100vw);
+    gap: calc(20 / 375 * 100vw);
+    padding-left: 5px;
+    margin-bottom: 42px;
+}
+
+    /* お知らせ1件分 */
+    .info-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: calc(315 / 375 * 100vw);
+        height: calc(162 / 375 * 100vw);
+        margin-left: calc(30 / 375 * 100vw);
+
+        padding: 20px 0;
+        gap: 0;
+    }
+
+        /* 日付 */
+    .info-item1 {
+        font-size: calc(17 / 375 * 100vw);
+        line-height: calc(25 / 375 * 100vw);
+        margin-top: calc(10 / 375 * 100vw);
+    }
+
+        /* タイトル */
+    .info-item2 {
+        font-size: calc(20 / 375 * 100vw);
+        line-height: calc(25 / 375 * 100vw);
+        margin-left: 0;
+        padding-top: calc(2  / 375 * 100vw);
+    }
+
+        /* 説明文 */
+    .info-item3 {
+        font-size: calc(16 / 375 * 100vw);
+        line-height: calc(24 / 375 * 100vw);
+        margin-left: 0;
+        padding-top: calc(6 / 375 * 100vw);
+    }
+
+ .info-item::after {
+    left: calc(-10 / 375 * 100vw);
+    bottom: -2px;
+    width: calc(335 / 375 * 100vw);
+    /* border-bottom: 1px solid #707070; */
+ }
+
+ /* 1行目の上にも線を引く */
+ .info-item:first-child::before {
+    content: "";
+    position: absolute;
+    left: calc(-10 / 375 * 100vw);
+    top: 0;
+    width: calc(335 / 375 * 100vw);
+    border-top: 1px solid #707070;
+ }
+
+ /* 5件目の下の線だけ位置を変更 */
+.info-item:last-child::after {
+    bottom: calc(23 / 375 * 100vw);
+}
+}
+
