@@ -235,9 +235,36 @@
         </section>
 
         <!-- アクセス -->
-        <section id="access" class="section access">
-            <h2>アクセス</h2>
-            
+        <section id="access" class="section-access">
+           <div class="access-inner">
+              <h2 class="access-title">
+                <img src="./imge/asiato.png" alt="" class="asiato-icon">
+                <span>アクセス</span>
+                <img src="./imge/asiato.png" alt="" class="asiato-icon">
+              </h2>
+
+              <!-- 画像と文字を横並びにする -->
+             <div class="access-content">
+                 <div class="access-image">
+                      <picture>
+                          <!-- 画面幅767px以下で表示する画像 -->
+                         <source media="(max-width: 767px)"srcset="imge/map_sp.jpg">
+                          <!-- 画面幅768px以上で表示する画像 -->
+                          <img src="imge/map.jpg" alt="" class="access-icon">
+                       </picture>
+                 </div>
+                 <div class="access-profile">
+                     <h3 class="access-content1">滑石きたむら動物病院 </h3>
+                     <p class="access-content2">〒852-8065　長崎県長崎市横尾○丁目○-○</p>
+                    <dir class="access-content3">
+                       <span class="tel-label">電話：</span>
+                       <span class="tel-number">000-0000-0000</span>
+                    </dir>
+                    <P class="access-content4">メール：info@example.com</P>
+                    <P class="access-content5">診療時間：24時間365日<br>休診日：なし</P>
+                 </div>
+              </div>  
+           </div>
         </section>
 
         <!-- お問い合わせ -->
