@@ -1110,3 +1110,80 @@ body {
     width: calc(335 / 375 * 100vw);
  }
 }
+
+/* お問い合わせ　セクション全体 */
+.section-contact {
+    width: 100%;
+    min-height: calc(842 / 1080 * 100vw);
+    background-color:#0D96A01A;
+    padding-inline: 0;
+}
+
+/* お問い合わせ */
+.contact-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(20 / 1080 * 100vw);
+    color: var(--color-main);
+    font-size: calc(25 / 1080 * 100vw);
+    padding-top: calc(65 / 1080 * 100vw);
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.main-overlay-text {
+    position: relative;
+    top: 0px;
+    text-align: center;
+    font-weight: 500;
+    font-size: calc(17 / 1080 * 100vw);
+    font-family: var(--font-eb);
+    color: var(--color-main);
+    line-height: 30px;
+}
+
+/* 名前・メールアドレス・内容　*/
+.contact-item {
+    display: grid;
+    grid-template-columns: calc(200 / 1080 * 100vm) 1fr;
+    gap: calc(20 / 1080 * 100vw);
+    align-items: center;
+    margin-bottom: calc(25 / 1080 * 100vw);
+}
+
+/* 左側の項目名 */
+.contact-item label {
+    font-size: calc(18 /1080 * 100VW);
+}
+
+/* 右側の入力欄 */
+.contact-item input {
+    width: 100%;
+    height: calc(50 / 1080* 100vw);
+    box-sizing:border-box;
+    padding: calc(10 / 1080 * 100vw);
+    border: 1px solid #707070;
+
+}
+
+/* 内容の入力欄 */
+.contact-item textarea {
+    width: 100%;
+    height: calc(180 / 1080 * 100vw);
+    box-sizing:border-box;
+    padding: calc(10 / 1080 * 100vw);
+    border:1px solid #707070;
+    resize: vertical;
+}
+
+/* 送信ボタン */
+.contact-button button {
+    width: calc(200 / 1080 * 100vw);
+    height: calc(55 / 1080 * 100vw);
+    background-color:#0D96A0;
+    color: white;
+    border:none;
+    cursor: pointer;
+    font-size: calc(1/ 1080 * 100vw);
+}
