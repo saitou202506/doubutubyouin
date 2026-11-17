@@ -8,13 +8,19 @@ html {
     -webkit-text-size-adjust: 100%;
     -webkit-appearance: none;
     word-break:break-all;
+    font-size: calc(100vw / 1080 * 16);
+}
+
+@media screen and (max-width: 767px) {
+    html {
+        font-size: calc(100vw / 375 * 16);
+    }
 }
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight:700;
     color:#505050;
-    /* font-size: 18px; */
     font-size: 1.125rem;
     letter-spacing: 0;
 }
@@ -63,7 +69,7 @@ body {
     align-items: center;
     gap: 9.51px;
     height: 50px;
-    font-size: 18px;
+    font-size: 1.127rem;
     font-family: var(--font-eb);
     color: var(--color-main);
     transition: opacity 0.4s;
@@ -83,13 +89,14 @@ body {
 
 @media (max-width: 767px) {
   .header-logo a {
-     font-size: 20px;
+     font-size: 1.25rem
    }
  }
 
  @media (max-width: 375px) {
     .header-logo a {
-        font-size: clamp(8px, calc(18 / 375 * 100vw), 18px);
+        /* font-size: clamp(8px, calc(18 / 375 * 100vw), 18px); */
+        font-size: 1.125rem;
         gap: clamp(4px, calc(9.51 / 375 * 100vw), 9.51px);
     }
 
@@ -110,7 +117,7 @@ body {
     display: flex;
     height: 50px;
     align-items: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: var(--font-eb);
     color:  var(--color-main);
     transition: opacity 0.4s;
@@ -124,8 +131,8 @@ body {
 
 .main-item_imge {
    position: relative;
-   margin-top: 25px;
-   width: 100%;  
+   margin-top: 23px;
+    width: 100%;   
 }
 
 .main-item_imge picture {
@@ -152,7 +159,7 @@ body {
     position: absolute;
     width: calc(492 / 1080 * 100vw);
     height: calc(210 / 1080 * 100vw);
-    top: calc(150 / 1080 * 100vw);
+    top: calc(152 / 1080 * 100vw);
     left: 0;
     background: #FFFFFFB3;
     box-sizing: border-box;
@@ -163,7 +170,7 @@ body {
     top: calc(23 / 210 * 100%);
     left: calc(99 / 492 * 100%);
     align-items: center;
-    font-size: calc(25 / 1080 * 100vw);
+    font-size: 1.5625rem;
     font-family: var(--font-eb);
     color:  var(--color-main);
 }
@@ -173,7 +180,7 @@ body {
     top: calc(67 / 210 * 100%);
     left: calc(99 / 492 * 100%);
     align-items: center;
-    font-size: calc(40 / 1080 * 100vw);
+    font-size: 2.5rem;
     line-height: 1.5;
     font-family: var(--font-eb);
     color: #0D96A0;
@@ -202,7 +209,7 @@ body {
     top: calc(18 / 148 * 100%);
     left: calc(20 / 311 * 100%);
     align-items: center;
-    font-size: calc(20 / 375 * 100vw);
+    font-size: 1.25rem;
  }
 
  .main-message2 {
@@ -210,7 +217,7 @@ body {
     top: calc(54 / 148 * 100%);
     left: calc(20 / 311 * 100%);
     align-items: center;
-    font-size: calc(30 / 375 * 100vw);
+    font-size: 1.875rem;
     line-height: 1.3;
  }
 
@@ -224,7 +231,7 @@ body {
 .main-overlay-description {
    position: relative;
     width: 100%;
-    height: 284px;
+    height: calc(284 / 1080 * 100vw);
     left: 0;
     background: #FFFFFF;
     box-sizing: border-box;
@@ -232,18 +239,18 @@ body {
 
 .main-message4 {
     position: relative;
-    top: 60px;
+    padding-top: 63px;
     text-align: center;
-    font-size: calc(30 / 1080 * 100vw);
+    font-size: 1.875rem;
     font-family: var(--font-eb);
     color: #0D96A0;
 }
 
 .main-overlay-text {
     position: relative;
-    top: 80px;
+    top: 18px;
     text-align: center;
-    font-size: calc(18 / 1080 * 100vw);
+    font-size: 1.125rem;
     font-family: var(--font-eb);
     color: var(--color-main);
     line-height: 33px;
@@ -275,8 +282,8 @@ body {
    }
    .main-message4 {
     top: calc(47 / 375 * 100vw);
-        font-size: calc(25 / 375 * 100vw);
-        line-height: calc(35 / 375 * 100vw);
+        font-size: 1.5625rem;
+        line-height: 1.5;
    }
   
    .sp-br {
@@ -286,7 +293,7 @@ body {
    .main-overlay-text {
     text-align: left;  
     top: calc(64 / 375 * 100vw);
-    font-size: calc(16 / 375 * 100vw);
+    font-size: 1rem;
     padding-inline: 20px;
     box-sizing: border-box;
     line-height: calc(30.1 / 375 * 100vw);
@@ -322,7 +329,7 @@ body {
     justify-content: center;
     gap: calc(20 / 1080 * 100vw);
     color: #505050;
-    font-size: calc(25 / 1080 * 100vw);
+    font-size: 1.5625rem;
     padding-top: calc(64 / 1080 * 100vw);
     line-height: 1.5;
 }
@@ -357,16 +364,15 @@ body {
 .strength-content2 {
     flex: 1;
     min-width: 0;
-    padding-top: calc(50 / 1080 * 100vw);
+    padding-top: calc(49 / 1080 * 100vw);
 }
 
 .strength-heading,
 .strength-heading1,
 .strength-heading2 {
     color: var(--color-main);
-    font-size: calc(22 / 1080 * 100vw);
+    font-size: 1.375rem;
     font-weight: 700;
-    /* line-height: 1.5; */
 }
 
 .strength-description1 {
@@ -375,7 +381,7 @@ body {
     margin-top: calc(22 / 1080 * 100vw);
     line-height: 33px;
     color: var(--color-main);
-    font-size: calc(18 / 1080 * 100vw);
+    font-size: 1.125rem;
     font-weight: 500;
 }
 
@@ -383,10 +389,10 @@ body {
 .strength-description2 {
     width: 100%;
     height: auto;
-    margin-top: calc(19 / 1080 * 100vw);
+    margin-top: calc(22 / 1080 * 100vw);
     line-height: 33px;
     color: var(--color-main);
-    font-size: calc(18 / 1080 * 100vw);
+    font-size: 1.125rem;
     font-weight: 500;
 }
 
@@ -394,6 +400,7 @@ body {
 .strength-image1,
 .strength-image2 {
     flex: 0 0 calc(440 / 1080 * 100vw);
+    padding-top:1px;
     min-width: 0;
 }
 
@@ -443,7 +450,7 @@ body {
     /* justify-content: center; */
     gap: calc(20.49 / 375 * 100vw);
     color: #505050;
-    font-size: calc(25 / 375 * 100vw);
+    font-size: 1.5625rem;
     padding-top: calc(49 / 375 * 100vw);
     /* line-height: 1.5; */
     margin-bottom: 40px;
@@ -499,7 +506,7 @@ body {
 
  .strength-heading {
     color: var(--color-main);
-    font-size: calc(20 / 375 * 100vw);
+    font-size: 1.25rem;
     font-weight: 700;
     text-align: center;
     padding-top: 10px;
@@ -515,7 +522,7 @@ body {
 
  .strength-heading1 {
     color: var(--color-main);
-    font-size: calc(20 / 375 * 100vw);
+    font-size: 1.25rem;
     font-weight: 700;
     padding-top: 11px;
     text-align: center;
@@ -523,7 +530,7 @@ body {
 
  .strength-heading2 {
     color: var(--color-main);
-    font-size: calc(20 / 375 * 100vw);
+    font-size: 1.25rem;
     font-weight: 700;
     padding-top: 15px;
     text-align: center;
@@ -536,7 +543,7 @@ body {
         width: 100%;
         height: auto;
         margin-top: 8px;
-        font-size: calc(16 / 375 * 100vw);
+        font-size: 1rem;
         line-height: 1.85;
         box-sizing: border-box;
     }
@@ -554,16 +561,15 @@ body {
     }
 }
 
-/* 強みの見出し */
+/* サービスの見出し */
 .service-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: calc(20 / 1080 * 100vw);
+    gap: calc(16 / 1080 * 100vw);
     color: #505050;
-    font-size: calc(25 / 1080 * 100vw);
-    margin-top: 2px;
-    line-height: 1.5;
+    font-size: 1.5625rem;
+    padding-top: calc(64 / 1080 * 100vw);
     margin-bottom: 47px;
 }
 
@@ -604,7 +610,7 @@ body {
 .service-heading1,
 .service-heading2 {
     color: var(--color-main);
-    font-size: calc(20 / 1080 * 100vw);
+    font-size: 1.25rem;
     font-weight: 700;
     text-align: center;
     padding-top: 15px;
@@ -612,18 +618,7 @@ body {
     /* line-height: 1.5; */
 }
 
-/* サービスの見出し */
-.service-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: calc(16 / 1080 * 100vw);
-    color: #505050;
-    font-size: calc(25 / 1080 * 100vw);
-    padding-top: calc(60 / 1080 * 100vw);
-    line-height: 1.5;
-    margin-bottom: 47px;
-}
+
 
 .service-description,
 .service-description1,
@@ -633,7 +628,7 @@ body {
     margin-top: calc(7 / 1080 * 100vw);
     line-height: 30px;
     color: var(--color-main);
-    font-size: calc(17 / 1080 * 100vw);
+    font-size: 1.0625rem;
     font-weight: 500;
 }
 
@@ -654,7 +649,7 @@ body {
     justify-content: center;
     gap: calc(15.7 / 375 * 100vw);                                             c(16 / 1080 * 100vw);
     color: #505050;
-    font-size: calc(25.1 / 375 * 100vw);
+     calc(25.1 / 375 * 100vw);
     padding-top: calc(43 / 375 * 100vw);
     /* line-height: 1.5; */
     margin-left: 1px;
@@ -685,34 +680,34 @@ body {
 
     /* 見出し */
     .service-heading {
-        font-size: calc(20.1 / 375 * 100vw);
+        font-size: 1.25rem;
         text-align: center;
         padding-top: 20px;
     }
 
     .service-heading1,
     .service-heading2 {
-        font-size: calc(20.1 / 375 * 100vw);
+        font-size: 1.25rem;
         text-align: center;
         padding-top: 30px;
     }
 
     /* 説明文 */
     .service-description {
-        font-size: calc(16 / 375 * 100vw);
+        font-size: 1rem;
         line-height: 1.8;
         padding-top: 4px;
     }
 
     .service-description1 {
-        font-size: calc(16 / 375 * 100vw);
+        font-size: 1rem;
         line-height: 1.8;
         padding-top: 7px;
     }
 
 
     .service-description2 {
-        font-size: calc(16 / 375 * 100vw);
+        font-size: 1rem;
         line-height: 1.9;
         padding-top: 5px;
     }
@@ -733,7 +728,7 @@ body {
     justify-content: center;
     gap: calc(20 / 1080 * 100vw);
     color: var(--color-main);
-    font-size: calc(25 / 1080 * 100vw);
+    font-size: 1.5625rem;
     padding-top: calc(66 / 1080 * 100vw);
     line-height: 1.5;
     margin-bottom: 45px;
@@ -780,7 +775,7 @@ body {
 
 /* 日付 */
 .info-item1 {
-    font-size: clamp(12px, calc(17 / 1080 * 100vw), 20px);
+     clamp(12px, calc(17 / 1080 * 100vw), 20px);
     font-weight:700;
     line-height: 25px;
     color: var(--color-main);
@@ -788,7 +783,8 @@ body {
 
 /* タイトル */
 .info-item2 {
-    font-size: clamp(13px, calc(20 / 1080 * 100vw), 25px);
+    /* font-size: clamp(13px, calc(20 / 1080 * 100vw), 25px); */
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 25px;
     color: #0D96A0;
@@ -797,7 +793,7 @@ body {
 
 /* 説明文 */
 .info-item3 {
-    font-size: clamp(10px, calc(17 / 1080 * 100vw), 22px);
+    font-size: 1rem;
     font-weight: 500;
     line-height: 30px;
     color: var(--color-main);
@@ -815,7 +811,7 @@ body {
 
 /* お知らせの見出し */
 .notice-title {
-    font-size: calc(25 / 375 * 100vw);
+    font-size: 1.5625rem;
     padding-top: calc(43 / 375 * 100vw);
     gap: calc(20 / 375 * 100vw);
     padding-left: 5px;
@@ -838,14 +834,14 @@ body {
 
         /* 日付 */
     .info-item1 {
-        font-size: calc(17 / 375 * 100vw);
+        font-size: 1.0625rem;
         line-height: calc(25 / 375 * 100vw);
         margin-top: calc(10 / 375 * 100vw);
     }
 
         /* タイトル */
     .info-item2 {
-        font-size: calc(20 / 375 * 100vw);
+        font-size: 1.25rem;
         line-height: calc(25 / 375 * 100vw);
         margin-left: 0;
         padding-top: calc(2  / 375 * 100vw);
@@ -853,7 +849,7 @@ body {
 
         /* 説明文 */
     .info-item3 {
-        font-size: calc(16 / 375 * 100vw);
+        font-size: 1rem;
         line-height: calc(24 / 375 * 100vw);
         margin-left: 0;
         padding-top: calc(6 / 375 * 100vw);
@@ -898,7 +894,7 @@ body {
     justify-content: center;
     gap: calc(20 / 1080 * 100vw);
     color: #505050;
-    font-size: calc(25 / 1080 * 100vw);
+    font-size: 1.5625rem;
     padding-top: calc(65 / 1080 * 100vw);
     line-height: 1.5;
     margin-bottom: calc(46 / 1080 * 100vw);
@@ -934,7 +930,7 @@ body {
  .access-content1 {
     height: calc(33 / 1080 * 100vw);
     align-items: center;
-    font-size: calc(22 / 1080 * 100vw);
+    font-size: 1.375rem;
     font-family: var(--font-eb);
     color:  var(--color-main);
  }
@@ -942,7 +938,7 @@ body {
   .access-content2 {
     height: calc(27 / 1080 * 100vw);
     align-items: center;
-    font-size: calc(18 / 1080 * 100vw);
+    font-size: 1.125rem;
     font-family: var(--font-eb);
     color:  var(--color-main);
     padding-top: calc(15 / 1080 * 100vw);
@@ -952,7 +948,7 @@ body {
    .access-content3 tel-label {
     height: calc(27 / 1080 * 100vw);
     align-items: center;
-    font-size: calc(18 / 1080 * 100vw);
+    font-size: 1.125rem;
     font-family: var(--font-eb);
     color:  var(--color-main);
  }
@@ -965,12 +961,12 @@ body {
 }
 
 .tel-label {
-    font-size: calc(17.8 / 1080 * 100vw);
+    font-size: 1.1125rem;
     color:  var(--color-main);
 }
 
 .tel-number {
-    font-size: calc(25 / 1080 * 100vw);
+    font-size: 1.5625rem;
     font-weight: bold;
     color: #0D96A0;
 
@@ -978,7 +974,7 @@ body {
 
 .access-content4{
     height: calc(27 / 1080 * 100vw);
-    font-size: calc(17.6 / 1080 * 100vw);
+    font-size: 1.1rem;
     color:  var(--color-main);
     padding-top: calc(28 / 1080 * 100vw);
 }
@@ -986,7 +982,7 @@ body {
 .access-content5 {
     position: relative;
     height: calc(80 / 1080 * 100vw);
-    font-size: calc(17.8 / 1080 * 100vw);
+    font-size: 1.1125rem;
     padding-top: calc(69 / 1080 * 100vw);
     line-height: calc(40 / 1080 * 100vw);
     padding-left: calc(4 / 1080 * 100vw);
@@ -1025,7 +1021,7 @@ body {
 
  /* アクセスの見出し */
 .access-title {
-    font-size: calc(25 / 375 * 100vw);
+    font-size: 1.5625rem;
     padding-top: calc(41 / 375 * 100vw);
     gap: calc(20 / 375 * 100vw);
     padding-left: 0px;
@@ -1057,13 +1053,13 @@ body {
 
 .access-content1 {
     height: calc(33 / 375 * 100vw);
-    font-size: calc(22 / 375 * 100vw);
+    font-size: 1.375rem;
     padding-top: calc(10 / 375 * 100vw);
  }
 
   .access-content2 {
     height: calc(24 / 375 * 100vw);
-    font-size: calc(16 / 375 * 100vw);
+    font-size: 1rem;
     font-weight: 500;
     padding-top: calc(22 / 375 * 100vw);
  }
@@ -1074,12 +1070,12 @@ body {
  }
 
  .tel-label {
-    font-size: calc(15.9 / 375 * 100vw);
+    font-size: 0.99375rem;
  }
 
  .tel-number {
     height: calc(40 / 375 * 100vw);
-    font-size: calc(25 / 375 * 100vw);
+    font-size: 1.5625rem;
     padding-left: calc(2 / 375 * 100vw);
     margin-top: calc(-3 / 375 * 100vw);
 
@@ -1087,7 +1083,7 @@ body {
 
  .access-content4 {
     height: calc(27 / 375 * 100vw);
-    font-size: calc(16 / 375 * 100vw);
+    font-size: 1rem;
     font-weight: 500;
     padding-top: calc(24 / 375 * 100vw);
  }
@@ -1095,7 +1091,7 @@ body {
  .access-content5 {
     /* position: relative; */
     height: calc(60 / 375 * 100vw);
-    font-size: calc(16 / 375 * 100vw);
+    font-size: 1rem;
     font-weight: 500;
     padding-top: calc(50 / 375 * 100vw);
     line-height: calc(30 / 375 * 100vw);
@@ -1132,7 +1128,7 @@ body {
     justify-content: center;
     gap: calc(20 / 1080 * 100vw);
     color: var(--color-main);
-    font-size: calc(25 / 1080 * 100vw);
+    font-size: 1.5625rem;
     padding-top: calc(65 / 1080 * 100vw);
     line-height: 1.5;
     margin-bottom: 24px;
@@ -1143,7 +1139,7 @@ body {
     top: 0px;
     text-align: center;
     font-weight: 500;
-    font-size: calc(17 / 1080 * 100vw);
+    font-size: 1.0625rem;
     font-family: var(--font-eb);
     color: var(--color-main);
     line-height: 30px;
@@ -1163,14 +1159,14 @@ body {
     gap: 0;
     align-items: center;
     /* margin-bottom: calc(25 / 1080 * 100vw); */
-    font-size: calc(20 / 1080 * 100vw);
+    font-size: 1.25rem;
     padding-top: 0;
     width: calc(100% - (100 / 1080 * 100vw));
 }
 
 /* 左側の項目名 */
 .contact-item label {
-    font-size: calc(20 /1080 * 100VW);
+    font-size: 1.25rem;
     text-align: left;
     color: var(--color-main);
     padding-left: calc(100 / 1080 * 100vw);
@@ -1190,7 +1186,7 @@ body {
 
 /* 左側の項目名 */
 .contact-item1 label {
-    font-size: calc(20 /1080 * 100VW);
+    font-size: 1.25rem;
     text-align: left;
     color: var(--color-main);
     padding-left: calc(100 / 1080 * 100vw);
@@ -1257,7 +1253,7 @@ body {
     
     .contact-title {
     gap: calc(20 / 375 * 100vw);
-    font-size: calc(25 / 375 * 100vw);
+    font-size: 1.5625rem;
     padding-top: calc(46 / 375 * 100vw);
     margin-bottom: 40px;
  }
@@ -1267,7 +1263,7 @@ body {
     top: 0px;
     text-align: left;
     font-weight: 500;
-    font-size: calc(16 / 375 * 100vw);
+    font-size: 1rem;
     font-family: var(--font-eb);
     color: var(--color-main);
  }
@@ -1292,7 +1288,7 @@ body {
  /* 左側の項目名 */
  .contact-item label {
     width:100%;
-    font-size: calc(18 /375 * 100VW);
+    font-size: 1.125rem;
     text-align: left;
     padding: 0;
     margin-top: calc(-6 / 375 * 100vw);
@@ -1328,7 +1324,7 @@ body {
 
  /* 左側の項目名 */
  .contact-item1 label {
-    font-size: calc(18 /375 * 100VW);
+    font-size: 1.125rem;
     text-align: left;
     /* color: var(--color-main); */
     /* padding-left: calc(100 / 375 * 100vw); */
@@ -1383,17 +1379,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3px;
 }
 
-.footer-nav ul {
-    
+.footer-nav {
+    display: flex;
+    position: relative; /* 追加 */
+    flex-direction: row; /* 横一列 */
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding-top: calc(65 / 1080 * 100vw);
+    padding-bottom: calc(50 / 1080 * 100vw);
+}
+
+.footer-nav ul {    
     display:flex;
     flex-direction: row;
     align-items: center;
-    /* row-gap: calc(20 / 1080 * 100vw); */
-    /* padding-top: calc(17 / 1080 * 100vw); */
-    /* padding-bottom: calc(50 / 1080 * 100vw); */
-
  }
 
  /* それぞれの行 */
@@ -1413,20 +1416,7 @@ body {
     margin-left: calc(14 / 1080 * 100vw);
 }
 
-.footer-nav {
-    display: flex;
-    position: relative; /* 追加 */
-    flex-direction: row; /* 横一列 */
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    padding-top: calc(67 / 1080 * 100vw);
-    padding-bottom: calc(50 / 1080 * 100vw);
-}
-
-
  /* 横線 */
-/* .footer-nav ul::after { */
 .footer-nav::after {
     content: "";
     position: absolute;
@@ -1439,7 +1429,7 @@ body {
     transform: translateX(-50%);
 
     /* 上下の位置 */
-    bottom: calc(27 / 1080 * 100vw);
+    bottom: calc(25 / 1080 * 100vw);
 
     height: 1px;
     background-color: #FFFFFF;
@@ -1449,7 +1439,7 @@ body {
     display: flex;
     height: calc(33 / 1080 * 100vw);
     align-items: center;
-    font-size: calc(20 / 1080 * 100vw);
+    font-size: 1.25rem;
     font-family: var(--font-eb);
     color: #FFFFFF;
     transition: opacity 0.4s;
@@ -1465,7 +1455,7 @@ body {
     display: flex;
     align-items: center;
     height: calc(33 / 1080 * 100vw);
-    font-size: calc(20 / 1080 * 100vw);
+    font-size: 1.25rem;
     font-family: var(--font-eb);
     color: #FFFFFF;
     transition: opacity 0.4s;
@@ -1551,11 +1541,11 @@ body {
 
 
     .footer-nav ul li a {
-        font-size: calc(18 / 375 * 100vw);
+        font-size: 1rem;
     }
     
     .footer-logo {
-    font-size: calc(16 / 375 * 100vw);
+    font-size: 1rem;
     }
 
     .footer-nav::after {
